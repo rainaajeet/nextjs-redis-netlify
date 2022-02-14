@@ -17,12 +17,12 @@ const client = new Client();
 
 export default async function getRepository() {
   if (!client.isOpen()) {
-    await client.open(process.env.REDIS_OM_URL ?? "redis://localhost:6379");
+    await client.open(process.env.REDIS_OM_URL ?? "redis-18931.c264.ap-south-1-1.ec2.cloud.redislabs.com:18931");
   }
 
   const repository = client.fetchRepository(schema);
 
-//   await repository.createIndex();
+    await repository.createIndex();
 
   return repository;
 }
