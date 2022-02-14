@@ -22,7 +22,7 @@ export default async function getRepository() {
 
   const repository = client.fetchRepository(schema);
 
-    await repository.createIndex();
+  //  await repository.createIndex();
 
   return repository;
 }
